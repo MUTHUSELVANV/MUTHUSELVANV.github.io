@@ -4,7 +4,7 @@
 
 Try it here: http://13.185.5.203:8501/
 
-Paste a resume and a job description, get a match report. No sign-up needed.
+Paste a resume and a job description, get a match report. No password, no sign-up needed.
 
 ## What it does
 
@@ -31,34 +31,9 @@ The web page is Streamlit. The report is emailed with Gmail SMTP when asked.
 
 Python, CrewAI, OpenAI API, Streamlit, Gmail SMTP. Deployed on AWS EC2 (t3.micro, Ubuntu 24.04).
 
-## Run it locally
-
-```bash
-git clone https://github.com/MUTHUSELVANV/agent-job-alert.git
-cd agent-job-alert
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Create a `.env` file in the project folder:
-
-```
-OPENAI_API_KEY=your-openai-key
-GMAIL_USER=your-gmail-address
-GMAIL_APP_PASSWORD=your-gmail-app-password
-```
-
-`GMAIL_USER` and `GMAIL_APP_PASSWORD` are only needed for the email feature. Never put `.env` on GitHub, it holds real keys.
-
-Then run:
-
-```bash
-streamlit run app.py
-```
-
-Open http://localhost:8501 in your browser.
-
 ## Live deployment
 
-The demo runs on an AWS EC2 instance (t3.micro, Ubuntu 24.04, Streamlit on port 8501). Code is pulled from this repo, keys live in `.env` on the server only.
+- Runs on an AWS EC2 instance (t3.micro, Ubuntu 24.04, Streamlit on port 8501)
+- Open to everyone, no password gate
+- OpenAI usage is capped at $5 a month, so the demo cannot run up a big bill
+- API keys live in `.env` on the server only, never in this repo
