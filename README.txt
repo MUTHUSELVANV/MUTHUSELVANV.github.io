@@ -1,39 +1,32 @@
-# Agentic AI — Job Match & Resume Evaluation System
+Massively by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-## Live demo
 
-Try it here: http://13.185.5.203:8501/
+This is Massively, a text-heavy, article-oriented design built around a huge background
+image (with a new parallax implementation I'm testing) and scroll effects (powered by
+Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
+that fulfills a few user requests and makes use of some new techniques I've been wanting
+to try out. Enjoy it :)
 
-Paste a resume and a job description, get a match report. No password, no sign-up needed.
+Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
 
-## What it does
+(* = not included)
 
-- Scores how well a resume fits a job description (match score out of 100)
-- Lists strengths and skill gaps
-- Rewrites 5 resume bullets to fit the job
-- Gives 5 interview prep questions
-- Optionally emails the report to any address
-- Resume can be pasted as text or uploaded (PDF, DOCX, TXT)
+AJ
+aj@lkn.io | @ajlkn
 
-Results on test runs: 31% more accurate than plain keyword matching, manual evaluation effort down 80%.
 
-## How it works
+Credits:
 
-Three AI agents, in order, built with CrewAI and the OpenAI API:
+	Demo Images:
+		Unsplash (unsplash.com)
 
-1. **Resume Analyst** — reads the resume, pulls out skills and experience
-2. **JD Analyst** — reads the job description, pulls out requirements
-3. **Match Evaluator** — compares the two, scores the fit, flags gaps, rewrites bullets
+	Icons:
+		Font Awesome (fontawesome.io)
 
-The web page is Streamlit. The report is emailed with Gmail SMTP when asked.
-
-## Tech stack
-
-Python, CrewAI, OpenAI API, Streamlit, Gmail SMTP. Deployed on AWS EC2 (t3.micro, Ubuntu 24.04).
-
-## Live deployment
-
-- Runs on an AWS EC2 instance (t3.micro, Ubuntu 24.04, Streamlit on port 8501)
-- Open to everyone, no password gate
-- OpenAI usage is capped at $5 a month, so the demo cannot run up a big bill
-- API keys live in `.env` on the server only, never in this repo
+	Other:
+		jQuery (jquery.com)
+		Scrollex (github.com/ajlkn/jquery.scrollex)
+		Responsive Tools (github.com/ajlkn/responsive-tools)
